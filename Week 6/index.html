@@ -12,74 +12,29 @@
 <body>
 
     <!--Include some bit of HTML elements when first getting started-->
-    <h1> Week 6 Intro Demo | Javascript</h1>
+    <h1> Week 6 JavaScript Pay Calc | Javascript</h1>
 
-    <!--show use of button element with onclick event-->
-    <button onclick="hello()">Say Hi :]</button>
+    // Step 1: Gather the user's hourly pay and hours worked for a two-week period
+let hourlyPay = Number(prompt("Enter your hourly pay:"));
+let hoursWorked = Number(prompt("Enter the number of hours worked in the two-week period:"));
 
-    <!--In-Document Javascript Element at END of HTML content, before the body class-->
-    <script>
-        //single line comment in JS
+// Step 2: Calculate Gross Pay, Uncle Sam's Share, and Net Pay
+let grossPay = hourlyPay * hoursWorked;
+let taxRate = 0.20;
+let uncleSamsShare = grossPay * taxRate;
+let netPay = grossPay - uncleSamsShare;
 
-        //create some variables --> JS requires DECLARATion: keyword 'var'
-        var num1 = 10
-        var num2 = 27
+// Step 3: Round the calculations to two decimal places
+grossPay = grossPay.toFixed(2);
+uncleSamsShare = uncleSamsShare.toFixed(2);
+netPay = netPay.toFixed(2);
 
-        /*
-        var sum = num1 + num2
+// Step 4: Display the results using alert and console.log
+alert(`Gross Pay: $${grossPay}\nUncle Sam's Share: $${uncleSamsShare}\nNet Pay: $${netPay}`);
 
-        //console.log() -- used for development; NOT for a user
-        console.log(sum)
-        console.log(num1, num2, sum)
-        console.log("The sum of ", num1," + ", num2," is ", sum)
-        console.log(`The sum of ${num1} + ${num2} is ${sum.toFixed(2)}`)
-
-        //alert() allows for a pop-up in the browser page to display data
-        //alert() --> OUTPUT to user [print()]
-        alert(`Hello World\nThe sum is ${sum.toFixed(2)}`)
-
-        console.log(`alert complete.`)
-
-        //prompt() allows for a pop-up with a text box for data input by user
-        //prompt() --> INPUT to user [input()]
-        var name = prompt(`Enter your name: `)
-
-        console.log(`prompt complete: ${name}`)
-
-        alert(`Hi there: ${name}!`)
-
-        //------------------------------------------------------------------------------
-        var hours = Number(prompt(`Enter your hours worked: `))
-
-        var gross = hours * 15
-        var taxA = gross * 0.2
-        var net = gross - taxA
-
-        console.log(`${hours.toFixed(1)} * 15 = $${gross.toFixed(2)}`)
-
-
-        */
-
-        // conditions in JS
-
-        var num = Number(prompt(`Enter a number: `))
-
-        if (num % 2 === 0)
-        {
-            alert(`The number is EVEN!`)
-        }
-        else
-        {
-            alert(`The number is ODD!`)
-        }
-
-        function hello()
-        {
-            console.log(`button clicked`)
-            alert(`Hello world`)
-        }
-
-        hello()
+console.log(`Gross Pay: $${grossPay}`);
+console.log(`Uncle Sam's Share: $${uncleSamsShare}`);
+console.log(`Net Pay: $${netPay}`);
 
     </script>
     
