@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katie Truchon, the coolest" >
+    <meta name="description" content="W2D2 Bio Assignment Demo" >
+    
+    <title>W2 | Bio</title>
+    <!--in doument styling loads in head so styles apply as the content loads-->
+    <!--handle many sleections of elements as opposed to one at a time-->
+    <style> 
+         /*in here we write CSS*/
+         /*slection in css and js select element on a page
+         by element type ex. body div p
+         by id attribute ex. wrapper naav footer title
+         */
+         
+
+        div {
+            border:1px solid rgb(214, 198, 198);
+            padding:10px; 
+            margin: 10px;
+            background-color: azure;
+
+        }
+
+        #wrapper {
+            background-color: black;
+            
+        }
+        #nav, #footer {
+            background-color: rgb(143, 196, 143);
+        }
+    </style>
+</head> 
+<body style= "background: grey;">
+    <!--all page content goes in the body-->
+    <!--wrapper: the wrapper literally wraps around all the content on the page-->
+    <div id="wrapper">
+        <h1 style="color:azure;">Cullen Hoerchler <i>or JoystickDripp</i></h1>
+        <!--NAVIAGATION-->
+        <div id="nav">
+
+            <!--linking to outside pages not a part of the website you need the full path protocol through file extension if not index.html-->
+            <a href="https://www.meca.edu" target=" _blank">Visit MECA</a><br>
+
+            <!--linking to internal pages you just use the relative path-->
+            <a href="page2.html#footer">Page 2</a><br>
+
+            <!--in page links linking to sections within the actual page itself-->
+            <a href="#bio">BIO</a>
+            <a href="#schools">SCHOOLS</a>
+            <a href="#hobbies">HOBBIES</a><br><br>
+            <a href="#footer">BOTTOM OF PAGE</a>
+
+        </div><!--/ nav-->
+
+        <!--BIO SECTION-->
+        <div id="bio">
+            <h2>About Me</h2>
+            Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.
+            
+            <br>
+
+            <!-- RELATIVE img example-->
+            <img src="images/stormsEnd.jpg" alt="liight illustration of storms end castle in the springtime" width="500">
+        </div>
+
+        <!--SCHOOLS SECTION-->
+        <div id="schools">
+
+            <h2>Schooling</h2>
+
+            <ol>
+                <li>School 1</li>
+                <li>School 2</li>
+                <li>School 3</li>
+            </ol>
+            
+            <img src="images/meca.jpg" alt="a picture of the porteous building, main campus for meca in portland ME" width="500">
+            <!--../../../ takes you out of the sub direcctory lets you take content from other directories-->
+        </div>
+
+        <!--HOBBIES SECTION-->
+        <div id="hobbies"> 
+
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Hobbies 1</li>
+                <li>Hobbies 2</li>
+                <li>Hobbies 3</li>
+            </ul>
+
+        </div>
+
+        <!--FOOTER SECTION-->
+        <div id="footer">
+
+            <a href="#wrapper">Back to Top</a><br>
+            <p>&copy; 2024 Cullen Hoerchler SE111 202440</p><br>
+            <!--VALIDATION IMAGE SCREENSHOT BELOW-->
+            
+                <img src="images/Screenshot 2024-07-25 094747.png" alt="validation screnshot for this page"
+                style= "width:100%">
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cullen Hoerchler">
+    <meta name="description" content="W5 Form">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Week 5 | Tables and Forms</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <!--Build your Table and Form here-->
+    <h1>Form Submission</h1>
+    <form action="confirm.html" method="get">
+        <table>
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Input</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" name="age" min="1" max="120" required></td>
+                </tr>
+                <tr>
+                    <td><label for="website">Website:</label></td>
+                    <td><input type="url" id="website" name="website"></td>
+                </tr>
+                <tr>
+                    <td><label for="comments">Comments:</label></td>
+                    <td><textarea id="comments" name="comments" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <p>&copy; 2024 Cullen Hoerchler SE111 202440</p><br>
+    <img src="images/Capture.PNG" alt="Validation Screenshot" width="500">
+</body>
+</html>

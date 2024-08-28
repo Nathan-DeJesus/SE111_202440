@@ -4,28 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Week 1">
-    <meta name="author" content="Nathan DeJesus">
-
-    <title>SE111|W1</title>
+    <meta name = "author" content = "C Hoerchler">
+    <meta name = "description" content = "Week 2">
+    <title>Document</title>
 </head>
 <body>
-    <h1>Nathan DeJesus</h1>
+    <!--the body holds all content for the page-->
+    <!--this a comment in html-->
 
-    <p>Hello! My name is Nathan and I come from <b>West Warwick</b>! I am a proud owner of <i>6 pets</i> and my favorite thing to do is play <u>video games</u>! Some of my hobbies are cosplaying, traveling, and building. I used to go to comic con back then but never had the time to go recently due to both work and college but I have hopes that I'll be able to go again soon! I already have an internship ready for me when i get my associate's degree which only makes me work harder so I can leave my current job and work there. </p>
-
+    <!--heading tags  are Block Level Elements (BLEs)-->
+    <!--BLEs create structure for page - they are literal blocks rectangles; start ona new left hand aligned line-->
+    <h1>Heading 1</h1><!--ONE h1 per page: content supportss SEO-->
+    <h2 style="border:1px solid rgb(255, 251, 0);"> Heading 2</h2>
+    <h3 style="border:1px solid rgb(255, 251, 0);">Heading 3</h3>
+    <h4 style="border:1px solid rgb(255, 251, 0);">Heading 4</h4>
+    <h5 style="border:1px solid rgb(255, 251, 0);">Heading 5</h5>
+    <h6 style="border:1px solid rgb(255, 251, 0);">Heading 6</h6>
+    <!--horizontal rule - sellf closing spits out a BLE line-->
     <hr>
 
-    <h3>My Pets!</h3>
-    <ol>
-        <li>Bailey</li>
-        <li>Casper</li>
-        <li>Thumper</li>
-        <li>Diamond</li>
-        <li>Buttons</li>
-        <li>Sully</li>
-    </ol>
+    <!--LISTS we have ordered (numbered)-->
+    <!--lists require a type of list and listing items-->
+    <h2>Favorite Dragons</h2>
+    <ol><!-- ordered list type-->
+        <li>Drogon</li>
+        <li>Spyrax</li>
+        <li>Moondancer</li>
+        <li>Verminthor</li>
+        <li>Cannibal</li>
+
+        <h2>My Hobbies</h2>
+        <ul><!--unordered list type-->
+            <li>hanging with my animals</li>
+            <li>gardening</li>
+            <li>reading</li>
+            <li>watching stuff</li>
+            <li>couch goblin</li>
+        </ul>
+        
+        <hr>
+
+        <h2>Paragraph Tags - for body text content</h2>
+        <p>Hello world! this is my first paragraph tag i am typing some extra words to showcase how this block level elemnts operates looks inside of a browseer page more words and things 
+        <br> <!--break space-->   
+        <br>
+        <br>
+        <br> 
+        dragons are awesome</p>
+
+        <hr>
+
+        <h2>divs - divisions create sections of content; they only hold other html elements never text content on its own</h2>
+
+        <div style = "border:1px solid grey; background-color: black; font-family: Helvetica; color: white;">
+            <h4>about me</h4>
+
+            <p>hi my name is kt and <b>i <u>love</u> dragons!</b></p>
+
+            <!--image tag-->
+        </div>
+
+        <hr>
+
+        <!--IMAGES are considered both inline and block level -->
+
+        <img src="https://assets-prd.ignimgs.com/2022/04/26/bloodhunt-1651017080976.jpg" alt="Bloodhunt video game" width = "300">
+        <!--above is an example of an absolute image path (booooooooooo)-->
+        <!--relative file paths are the best these live directly within the root folder-->
+        <img src="images/ss_69ed5ad5ab272a363ac273267e0adbea84865c40.1920x1080.jpg" alt="bloodhunt video game" width = 300>
+        <!--IMG requires 2 attributes-->
+        <!--*src > file path image
+        *alt > alt text what is read on screenreaders supports SEO-->
+
+        <hr>
+
+        <h2>hypertext links</h2>
+
+        <p>hyper links give us acceess to <a href="https://www.neit.edu">other pages</a>! they are knowon as the <i>anchor</i> tag.</p>
 </body>
 </html>
-
-<!--<img src  needs the picture url to work and the alt needs the alternative text if the picture is broken-->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cullen Hoerchler" >
+    <meta name="description" content="Pay Calc" >
+    <title>Week 6</title>
+</head>
+<body>
+    <h1>Pay Calculator</h1>
+    <script>
+         var name = prompt(`Enter you name: `)
+         console.log(`alert complete: ${name}`)
+         alert(`Welcome to the Pay Calculator ${name}!`)
+
+         var hours = Number(prompt(`Enter your hours worked: `))
+         var rate = Number(prompt(`Enter your hourly rate: `))
+         var gross = hours * rate * 2
+         var taxA = gross * 0.2
+         var net = gross - taxA
+
+         alert(`Thank you for the information!`)
+         console.log(`alert complete: ${gross.toFixed(2)}`)
+         console.log(`alert complete: ${taxA.toFixed(2)}`)
+         console.log(`alert complete: ${net.toFixed(2)}`)
+         alert(`\nGross Pay: $${gross.toFixed(2)} \nUncle Sam's Share: $${taxA.toFixed(2)} \nNet Pay: $${net.toFixed(2)}`)
+
+
+
+    </script>
+    
+    
+</body>
+</html>
