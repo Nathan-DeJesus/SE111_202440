@@ -159,8 +159,6 @@
             var hello = document.querySelector(`#hello`)
             hello.innerHTML += ` ${fname} !`
 
-            //document.querySelector()
-
             //store the #info div to a variable
             var info = document.querySelector(`#info`)
 
@@ -199,7 +197,16 @@
             console.log(`clicked() reached!`)
             you.style.color = `green`
             you.style.fontSize = `40px`
+
         }
+
+        var button = document.querySelector(`#submit`)
+
+        //demoing an anonymous function (function without a name; immediately defined)
+        //we use these when the function will not be reused outside of the specific event
+        button.addEventListener(`click`, function(event){
+            console.log(event)
+        })
 
 
 	</script>
