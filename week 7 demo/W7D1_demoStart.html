@@ -102,8 +102,106 @@
 
     <br><br><br><br><br>
     <p>end</p>
+
+
     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
     <script>
+        //we write JS in here
+
+        //selecting elements from the html document --> 'document' current HTML file
+        //global variable: accessible everywhere after its creation
+        var body = document.querySelector(`body`)
+
+        console.log(body)
+
+        //create a new variable to hold the new HTML element
+        var newP = ``
+        newP += `<h2>` //newP = newP + `<p>`
+        newP += `hello world! This content was added to the page with <b>Javascript!</b>`
+        newP += `</h2>`
+
+        console.log(newP)
+
+        //add the new HTML element to the page - this will add to the END of the BODY
+        body.innerHTML += newP
+        //body.style.color = `blue`
+
+        //set up an actionable event so that when a button is clicked, info is written to the page (#info)
+        //FIRST: add event listener for event to the element
+        //adding an event listener to the #enter-button at the end of the mini form
+        document.querySelector(`#enter-button`).addEventListener(`click`, alertInfo)
+        //^^.addEventListener(EVENT TYPE, FUNCTION THAT RUNS ONCE EVENT)
+
+        //event based funvtions MUST include the EVENT PARAMETER (e/ev/event)
+        //alertInfo() definition below
+        function alertInfo(event)
+        {
+            //local vars: their value only exists INSIDE of the function; they are only accessible {in here}
+            //the local vars below will hold the VALUES from the mini form
+
+            var fname = document.querySelector(`#first`).value
+            var lname = document.querySelector(`#last`).value
+            var age = Number(querySelector(`#age`).value) //cant do math with strings!
+
+            console.log(fname, lname, age)
+
+            //basic control flow for an age alert
+            if (age >= 18)
+            {
+                alert(`You ARE old enough to vote!`)
+            }
+            else
+            {
+                alert(`You ARE NOT old enough to vote!`)
+            }
+
+            //select the #hello element and store it; then add the user's name to the hello message
+            var hello = document.querySelector(`#hello`)
+            hello.innerHTML += ` ${fname} !`
+
+            //document.querySelector()
+
+            //store the #info div to a variable
+            var info = document.querySelector(`#info`)
+
+            //calculate dog years
+            var dog_age = (age * 7).toFixed(1) //stores value as rounded decimal; will change value if more than 1 decimal value
+
+
+            //test values in console
+            console.log(`YOUR AGE: ${age} human years; ${dog_age} dog years`)
+
+            //add the age messages to the #info div as content in the HTML page
+            info.innerHTML += `<p><b>YOUR AGE:</b> ${age} human years; <br> <b>DOG AGE; </b> ${dog_age} dog years</p>`
+
+            //add dog_age to global body
+            body.innerHTML += `<br><p>You are ${dog_age} years old!</p>`
+
+        }//alertInfo() CLOSE
+
+        //global variables: the ones declared below will only be accessible to the functions AFTER they have been declared
+        var me = document.querySelector(`#me`)
+        var you = document.querySelector(`#you`)
+
+        //add event listeners to non-button items - all elements are fair game
+        me.addEventListener(`click`, clicked)
+        you.addEventListener(`click`, clickedGreen)
+
+        function clicked(event)
+        {
+            console.log(`clicked() reached!`)
+            me.style.color = `red`
+            me.style.fontSize = `40px`
+        }
+
+        function clickedGreen(event)
+        {
+            console.log(`clicked() reached!`)
+            you.style.color = `green`
+            you.style.fontSize = `40px`
+        }
+
+
 	</script>
 	
 </body>
